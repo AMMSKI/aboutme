@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #000000;
+    --text-primary: #cccccc;
+    --text-heading: #ffffff;
+    --text-dim: #777777;
+    --text-subtle: #555555;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* antfu 1:1 Prose Links & Badges */
+.antfu-link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #555555;
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+
+.antfu-link:hover {
+  text-decoration-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.antfu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  background: #111111;
+  border: 1px solid #222222;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  color: #cccccc;
+  line-height: 1.25;
+}
+
+.antfu-badge:hover {
+  border-color: #444444;
+  color: #ffffff;
+}

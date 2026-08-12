@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Minimal Dark Background Disc -->
+  <rect width="64" height="64" rx="32" fill="#050505"/>
+  
+  <!-- Clear Distinct Sage Green Leaf Silhouette -->
+  <path d="M32 10 C18 24 18 46 32 54 C46 46 46 24 32 10 Z" fill="#8da38c"/>
+  
+  <!-- Center Stem & Leaf Veins -->
+  <path d="M32 18 L32 50" stroke="#050505" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 28 L40 22" stroke="#050505" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M32 34 L24 28" stroke="#050505" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M32 40 L39 35" stroke="#050505" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
