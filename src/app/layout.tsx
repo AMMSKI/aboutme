@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Quicksand } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const quicksand = Quicksand({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-quicksand',
 });
 
 export const metadata: Metadata = {
   title: 'Alan Mamulski',
-  description: 'Full-stack engineer and builder based in Utah.',
+  description: 'Software engineer based in Utah.',
   authors: [{ name: 'Alan Mamulski' }],
   icons: [
     { rel: 'icon', url: '/icon.svg', type: 'image/svg+xml' },
   ],
 };
-
 
 export default function RootLayout({
   children,
@@ -23,9 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-black text-[#cccccc]">{children}</body>
+    <html lang="en" className={`${quicksand.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-black text-[#cccccc] font-sans">{children}</body>
     </html>
   );
 }
+
+
 
