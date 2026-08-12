@@ -9,12 +9,37 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: 'Alan Mamulski',
-  description: 'Software engineer based in Utah.',
+  description: 'Full-stack engineer and builder based in Utah.',
   authors: [{ name: 'Alan Mamulski' }],
   icons: [
-    { rel: 'icon', url: '/icon.svg', type: 'image/svg+xml' },
+    { rel: 'icon', url: '/icon.png', type: 'image/png' },
   ],
+
+
+  openGraph: {
+    title: 'Alan Mamulski',
+    description: 'Full-stack engineer and builder based in Utah.',
+    url: 'https://mamulski.com',
+    siteName: 'Alan Mamulski',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'Alan Mamulski — Full-Stack Engineer & Builder',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alan Mamulski',
+    description: 'Full-stack engineer and builder based in Utah.',
+    images: ['/og-image.jpg'],
+  },
 };
+
 
 export default function RootLayout({
   children,
