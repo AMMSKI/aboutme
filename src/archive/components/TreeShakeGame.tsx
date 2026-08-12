@@ -3,8 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { flagshipProject, enterpriseCaseStudies, personalInfo } from '@/data/portfolio';
-import { personalStory } from '@/data/personalStory';
 import { Sparkles, BookOpen, RotateCcw, CheckCircle2, ChevronRight, X, FileText, Mail, Briefcase, Download, Scroll, Play, Moon, Sun, Heart } from 'lucide-react';
+
 
 interface DroppedItem {
   id: string;

@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { personalInfo, flagshipProject, enterpriseCaseStudies } from '@/data/portfolio';
-import { personalStory } from '@/data/personalStory';
 import { Download, Check, Mail, ArrowUpRight } from 'lucide-react';
+
 import { GithubIcon, LinkedinIcon } from '@/components/BrandIcons';
 import { FallingLeavesOverlay } from '@/components/FallingLeavesOverlay';
 
@@ -189,7 +189,7 @@ export default function Home() {
                 I love building software that feels great to use. Whether it's shipping full-stack web apps, native mobile apps, backend data pipelines, or small Unity games, I focus on building things that are simple, fast, and reliable.
               </p>
               <p>
-                I live in Utah with my wife, two daughters, and our cat Bumi. When I'm not coding, I'm usually picking up a random new hobby, whether that's photography, clay sculpting, refurbishing old furniture, or skateboarding. Huge fan of games with great atmosphere like Outer Wilds and Dredge, and games like GTA V and everything in-between. I code for fun, regardless of whether it's a work project or a personal project.
+                I live in Utah with my wife, two daughters, and our cat Bumi. When I'm not coding, I'm usually picking up a random new hobby, any given week it could be photography, sculpting, refurbishing old furniture, or skateboarding. Huge fan of games with great atmospheres like Outer Wilds or Dredge, AAA games like GTA V and pretty much everything in-between.
               </p>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-sm text-[#d4d4d8] leading-relaxed">
-                  Co-founded a home bakery SaaS platform and marketplace connecting local home bakeries with neighbors. I really got to flex my generalist muscles with the full stack, building and architecting the web app, the React Native iOS app, backend API routes, Mapbox discovery, push notifications, and automated seller payouts through Stripe Connect.
+                  Co-founded a home bakery SaaS platform and marketplace connecting home bakeries with their neighbors. I got to flex my generalist muscles, building and architecting the web app, the React Native iOS app, backend API routes, CI/CD workflows, database design, Mapbox discovery, push notifications, Stripe integrations and much more.
                 </p>
               </a>
 
