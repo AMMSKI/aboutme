@@ -27,6 +27,7 @@ export interface CaseStudy {
   tags: string[];
   challenge: string;
   execution: string[];
+  url?: string;
   diagramType?: 'sequence' | 'flowchart';
   diagramDefinition?: string;
 }
@@ -109,6 +110,18 @@ export const flagshipProject: Project = {
 
 export const enterpriseCaseStudies: CaseStudy[] = [
   {
+    id: 'bill-agentic-ai',
+    company: 'Bill.com',
+    title: 'Practical AI Integration & Telemetry',
+    tags: ['TypeScript', 'Python', 'LLMs', 'Telemetry'],
+    url: 'https://www.bill.com/press-release/bill-launches-new-ai-agents',
+    challenge: 'Integrating practical AI and document recognition tools into high-volume data workflows while keeping them fast and observable.',
+    execution: [
+      'Tested prompt tweaks and document processing improvements to boost text extraction accuracy.',
+      'Added telemetry, metrics, and tracking to catch issues early and ensure workflow reliability.',
+    ],
+  },
+  {
     id: 'bill-product-engineering',
     company: 'Bill.com',
     title: 'Full-Stack Feature Engineering & Account Workflows',
@@ -118,17 +131,6 @@ export const enterpriseCaseStudies: CaseStudy[] = [
       'Led feature engineering and API design for core customer workflows across web interfaces and backend services.',
       'Worked alongside security and compliance teams to review and secure user-facing input flows.',
       'Refactored legacy code in high-traffic areas to improve app speed, reliability, and maintainability.',
-    ],
-  },
-  {
-    id: 'bill-agentic-ai',
-    company: 'Bill.com',
-    title: 'Practical AI Integration & Telemetry',
-    tags: ['TypeScript', 'Python', 'LLMs', 'Telemetry'],
-    challenge: 'Integrating practical AI and document recognition tools into high-volume data workflows while keeping them fast and observable.',
-    execution: [
-      'Tested prompt tweaks and document processing improvements to boost text extraction accuracy.',
-      'Added telemetry, metrics, and tracking to catch issues early and ensure workflow reliability.',
     ],
   },
   {

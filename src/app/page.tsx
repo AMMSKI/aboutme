@@ -200,13 +200,13 @@ export default function Home() {
               Projects & Work
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-1">
               {/* Homebaked Project Block */}
               <a
                 href={flagshipProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group space-y-2 p-3.5 rounded-xl hover:bg-[#111111] transition-colors border border-transparent hover:border-[#222222] -mx-3.5"
+                className="block group space-y-1 p-3.5 rounded-xl hover:bg-[#111111] transition-colors border border-transparent hover:border-[#222222] -mx-3.5"
               >
                 <div className="flex flex-wrap items-center gap-2 text-sm">
                   <div className="font-medium text-[#f4f4f5] group-hover:text-[#8da38c] transition-colors flex items-center gap-1.5">
@@ -221,15 +221,15 @@ export default function Home() {
                 </p>
               </a>
 
-
               {/* Enterprise Work Entries */}
-              <div className="space-y-3 pt-1">
-                {enterpriseCaseStudies.map((study) => (
-                  <div key={study.id} className="space-y-1">
+              {enterpriseCaseStudies.map((study) => {
+                const content = (
+                  <>
                     <div className="flex flex-wrap items-center gap-2 text-sm">
-                      <span className="font-medium text-[#f4f4f5]">
-                        {study.title}
-                      </span>
+                      <div className="font-medium text-[#f4f4f5] group-hover:text-[#8da38c] transition-colors flex items-center gap-1.5">
+                        <span>{study.title}</span>
+                        {study.url && <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />}
+                      </div>
                       <span className="text-xs text-[#888888]">· {study.company}</span>
                     </div>
                     <p className="text-sm text-[#d4d4d8] leading-relaxed">
@@ -237,9 +237,25 @@ export default function Home() {
                         ? 'Building reliable full-stack features and API workflows for large-scale financial management platforms.'
                         : study.challenge}
                     </p>
+                  </>
+                );
+
+                return study.url ? (
+                  <a
+                    key={study.id}
+                    href={study.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group space-y-1 p-3.5 rounded-xl hover:bg-[#111111] transition-colors border border-transparent hover:border-[#222222] -mx-3.5"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={study.id} className="space-y-1 p-3.5 rounded-xl -mx-3.5">
+                    {content}
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
 
