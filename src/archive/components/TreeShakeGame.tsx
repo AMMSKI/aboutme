@@ -40,7 +40,7 @@ export function TreeShakeGame() {
   const [showFullDossier, setShowFullDossier] = useState<boolean>(false);
 
   // DISMISSABLE JOURNAL SIDEBAR & FLOATING BUTTON TRIGGER STATE
-  const [isJournalOpen, setIsJournalOpen] = useState<boolean>(false);
+  const [isJournalOpen, setIsJournalOpen] = useState<boolean>(true);
   const [hasUnreadJournal, setHasUnreadJournal] = useState<boolean>(false);
 
 
@@ -56,30 +56,30 @@ export function TreeShakeGame() {
       id: 'building-homebaked',
       type: 'log' as const,
       title: 'THE HOMEBAKED JOURNEY',
-      category: 'CO-FOUNDER & LEAD ENGINEER',
-      content: 'Co-founding Homebaked came from wanting to build something real for local neighborhood bakeries. I built our unified API with Next.js and Postgres to power both our web app and native iOS app in React Native, setting up automated Stripe Connect payouts, push notifications, and geospatial discovery. Seeing real bakers use it to run their business is the best feeling in the world.',
+      category: `${flagshipProject.role.toUpperCase()} | ${flagshipProject.title.toUpperCase()}`,
+      content: flagshipProject.overview,
       linkUrl: flagshipProject.url,
     },
     {
       id: 'fintech-pipelines',
       type: 'log' as const,
       title: 'SCALING FINTECH & REAL-TIME DATA',
-      category: 'BILL.COM & DIVVY',
-      content: 'At Bill.com and Divvy, I got to work on heavy real-time data pipelines, processing incoming database updates across microservices without losing a single bit. I love working on high-throughput systems where reliability is everything, whether that is designing receipt automation tools, OCR document extractions, or building telemetry workflows to catch errors early.',
+      category: 'ENTERPRISE & SYSTEMS ENGINEERING',
+      content: `${enterpriseCaseStudies[0].company}: ${enterpriseCaseStudies[0].execution[0]} ${enterpriseCaseStudies[2].company}: ${enterpriseCaseStudies[2].execution[0]} Worked extensively across high-throughput data processing, API design, telemetry, and system reliability.`,
     },
     {
       id: 'how-i-work',
       type: 'log' as const,
       title: 'CRAFT, DESIGN, & COLLABORATION',
       category: 'ENGINEERING PHILOSOPHY',
-      content: 'I approach software development as a creative, hands-on process. I love taking complex business logic and turning it into clean, modular code that designers, product owners, and other developers genuinely enjoy working with. Whether I am architecting Elixir backends or polishing React components, my goal is always to make software that is simple, fast, and delightful to use.',
+      content: `${personalInfo.subheadline} I approach software development as a creative, hands-on process, turning complex requirements into simple, fast, and reliable tools.`,
     },
     {
       id: 'life-hobbies',
       type: 'log' as const,
       title: 'LIFE, FAMILY, & WEEKLY OBSESSIONS',
       category: 'BEYOND THE CODE',
-      content: 'My world revolves around my family: my wife, my two daughters, and our cat Bumi. Born and raised in Utah, I love snowboarding, golf, 3D printing, PC gaming, and building indie games. I get continually obsessed with random rabbit-hole hobbies for a week, whether that is photography, clay sculpting, furniture refurbishing, or skateboarding. Big fan of games like Outer Wilds and Dredge, and movies like Oppenheimer or Superbad.',
+      content: `Based in ${personalInfo.location}. My world revolves around my family: my wife, my two daughters, and our cat Bumi. Born and raised in Utah, I love snowboarding, golf, 3D printing, PC gaming, and building indie games. Big fan of games like Outer Wilds and Dredge!`,
     },
     {
       id: 'contact-email',
@@ -94,7 +94,7 @@ export function TreeShakeGame() {
       type: 'acorn' as const,
       title: 'LINKEDIN PROFILE',
       category: 'CONNECT WITH ALAN',
-      content: 'Connect with me on LinkedIn (linkedin.com/in/alan-mamulski) to check out my work history, recommendations, and past squad projects.',
+      content: `Connect with me on LinkedIn (${personalInfo.socials.linkedin.replace('https://www.', '')}) to check out my work history, recommendations, and past projects.`,
       linkUrl: personalInfo.socials.linkedin,
     },
     {
@@ -102,7 +102,7 @@ export function TreeShakeGame() {
       type: 'acorn' as const,
       title: 'GITHUB REPOSITORIES',
       category: 'CODE & SIDE PROJECTS',
-      content: 'Check out my GitHub (github.com/AMMSKI) for open-source code, 3D web experiments, and side projects I build for fun.',
+      content: `Check out my GitHub (${personalInfo.socials.github.replace('https://', '')}) for open-source code, 3D web experiments, and side projects I build for fun.`,
       linkUrl: personalInfo.socials.github,
     },
     {
@@ -110,7 +110,7 @@ export function TreeShakeGame() {
       type: 'scroll' as const,
       title: 'GOLDEN RESUME SCROLL',
       category: 'DOWNLOAD OFFICIAL RESUME',
-      content: 'Grab a copy of my official 2026 software engineering resume PDF detailing my work at Bill.com, Anglepoint, Divvy, and Homebaked.',
+      content: `Grab a copy of my official 2026 software engineering resume PDF detailing my work as ${personalInfo.roleTitle}.`,
       linkUrl: '/resume.pdf',
     },
   ];
